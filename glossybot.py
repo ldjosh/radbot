@@ -11,9 +11,9 @@ import datetime
 import textwrap
 
 db = MySQLdb.connect(host="localhost",  # your host, usually localhost
-                     user="root",  # your username
-                     passwd="asuna11!",  # your password
-                     db="ana")  # name of the data base
+                     user="",  # your username
+                     passwd="",  # your password
+                     db="")  # name of the data base
 
 cur = db.cursor()  # you must create a Cursor object. It will let you execute all the queries you need
 #argfile = str(sys.argv[1])
@@ -28,10 +28,10 @@ last = 0
 killsig = 0  #are we shutting down?
 killword = 'dieinafire'  #shutdown word. when seen changes killsig to 9
 team = ['@ldjosh', '@tiinpa', '@dalamon', '@narfjones', '@ffsbrett']
-CONSUMER_KEY = '8PK0tn1SbO5fgJAAW8B8kIkN4'  #keep the quotes, replace this with your consumer key
-CONSUMER_SECRET = 'eEVgVW9WTSy8cdvV6GHkIpEIZ6Gx6kf9QZnt9aQMWST0sPGm5F'  #keep the quotes, replace this with your consumer secret key
-ACCESS_KEY = '1705789242-uWZzlkHb43GMW56NuvteqNIncjEr6JZBrUK2UL0'  #keep the quotes, replace this with your access token
-ACCESS_SECRET = 'Jdv86yOD33m6ThkxGWKE0XgASwSFfHUJTay4QbTNkrgwV'  #keep the quotes, replace this with your access token secret
+CONSUMER_KEY = ''  #keep the quotes, replace this with your consumer key
+CONSUMER_SECRET = ''  #keep the quotes, replace this with your consumer secret key
+ACCESS_KEY = ''  #keep the quotes, replace this with your access token
+ACCESS_SECRET = ''  #keep the quotes, replace this with your access token secret
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_KEY, ACCESS_SECRET)
 api = tweepy.API(auth)
